@@ -7,7 +7,7 @@ from function import find_extrema, plot_window, find_patterns
 
 if __name__ == '__main__':
 
-    data = pd.read_csv('AAPL.csv', ',')
+    data = pd.read_csv('PFE.csv', ',')
     #data.set_index('Date', inplace=True)
 
     ######################################################
