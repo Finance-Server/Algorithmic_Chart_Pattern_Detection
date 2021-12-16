@@ -48,9 +48,9 @@ if __name__ == '__main__':
                 s = prices.index[start-1]
                 e = prices.index[end+6]
 
-                plot_window(prices[s:e], extrema.loc[s:e],
-                            smooth_prices[s:e],
-                            smooth_extrema.loc[s:e], ax=axes[i])
+                plot_window(prices[s:e], extrema.loc[s:e-5],
+                            smooth_prices[s:e-5],
+                            smooth_extrema.loc[s:e-5], ax=axes[i])
                 i+=1
             
             folder = '/Users/Maxou/Documents/Cours/PROGRAMMATION/FINANCE/Algorithmic_Chart_Pattern_Detection/Resultat/'+str(ticker)
