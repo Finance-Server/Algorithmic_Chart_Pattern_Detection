@@ -63,10 +63,8 @@ def plot_window(prices, extrema, smooth_prices, smooth_extrema, ax=None):
     ax.scatter(extrema.index, extrema.values, color='red')
     smooth_prices.plot(ax=ax, color='green')
     ax.scatter(smooth_extrema.index, smooth_extrema.values, color='green')
-    #plt.show()
 
-
-def find_patterns(s, max_bars=35):
+def find_patterns(s, max_bars=20):
     """
     Input:
         s: extrema as pd.series with bar number as index
