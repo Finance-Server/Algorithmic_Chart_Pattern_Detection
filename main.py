@@ -48,7 +48,7 @@ if __name__ == '__main__':
                 s = prices.index[start-1]
                 e = prices.index[end+6]
 
-                plot_window(prices[s:e], extrema.loc[s:e-5],
+                plot_window(ticker, name, prices[s:e], extrema.loc[s:e-5],
                             smooth_prices[s:e-5],
                             smooth_extrema.loc[s:e-5], ax=axes[i])
                 i+=1

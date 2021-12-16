@@ -53,7 +53,7 @@ def find_extrema(s, bw='cv_ls'):
     # Return series for each with bar as index
     return extrema, prices, smooth_extrema, smooth_prices
 
-def plot_window(prices, extrema, smooth_prices, smooth_extrema, ax=None):
+def plot_window(ticker, pattern, prices, extrema, smooth_prices, smooth_extrema, ax=None):
 
     if ax is None:
         fig = plt.figure()
@@ -63,6 +63,7 @@ def plot_window(prices, extrema, smooth_prices, smooth_extrema, ax=None):
     ax.scatter(extrema.index, extrema.values, color='red')
     smooth_prices.plot(ax=ax, color='green')
     ax.scatter(smooth_extrema.index, smooth_extrema.values, color='green')
+    plt.title(str(ticker) + ' - ' + str(pattern))
 
 def find_patterns(s, max_bars=20):
     """
