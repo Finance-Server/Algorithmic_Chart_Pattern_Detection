@@ -46,11 +46,11 @@ if __name__ == '__main__':
                 result = result.append({'Pattern':name, 'Start_bar':start, 'End_bar':end}, ignore_index=True)
         
                 s = prices.index[start-1]
-                e = prices.index[end+6]
+                e = prices.index[end+10]
 
-                plot_window(ticker, name, prices[s:e], extrema.loc[s:e-5],
-                            smooth_prices[s:e-5],
-                            smooth_extrema.loc[s:e-5], ax=axes[i])
+                plot_window(ticker, name, prices[s:e], extrema.loc[s:e-9],
+                            smooth_prices[s:e-9],
+                            smooth_extrema.loc[s:e-9], ax=axes[i])
                 i+=1
             
             folder = '/Users/Maxou/Documents/Cours/PROGRAMMATION/FINANCE/Algorithmic_Chart_Pattern_Detection/Resultat/'+str(ticker)
